@@ -9,7 +9,169 @@
     <title>Vite App</title>
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    <div class="bg-black">dadasdsadsdas</div>
+    <div class="container">
+      <header class="mt-8 flex justify-between items-center">
+        <a href="/">
+          <img class="w-24 sm:w-32 lg:w-44" src="./img/logo.png" alt="" />
+        </a>
+        <nav class="flex items-center gap-4">
+          <ul class="hidden lg:flex navi">
+            <li><a href="">Pagrindinis</a></li>
+            <li><a href="">Apie sodybą</a></li>
+            <li><a href="">Pramogos</a></li>
+            <li><a href="">Dekoracijos</a></li>
+            <li><a href="">Kontaktai</a></li>
+          </ul>
+          <a class="btn btn-primary" href="">Užsisakyti</a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="lg:hidden w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+          </svg>
+        </nav>
+      </header>
+      <section class="pt-12 pb-24 lg:pb-36 styled lg:grid grid-cols-2 gap-20">
+        <div class="mb-8 max-w-[450px] lg:max-w-[100%] self-center">
+          <h1 class="hero-title">Petrauskų <span class="add-color">sodyba</span>, tai išskirtinė vieta jūsų šventėms</h1>
+          <p class="mb-8 max-w-[420px]">Šiuolaikiška sodyba, apgaubta gamtos grožiu, idealiai pritaikyta jūsų šventėms ir renginiams.</p>
+          <a class="btn btn-outline" href="">Apie sodybą</a>
+        </div>
+        <div class="hero-img">
+          <img class="w-full" src="./img/hero-img.webp" alt="" />
+        </div>
+      </section>
+
+      <main>
+        <section class="py-24 lg:pb-36 styled">
+          <div class="lg:grid lg:grid-cols-2 lg:gap-12 xl:gap-20 mb-16">
+            <img class="styled-img" src="./img/about-img.webp" alt="" />
+            <div class="mt-6 lg:mt-0 lg:self-center">
+              <h2 class="title">Apie sodybą</h2>
+              <p>
+                Netoli Kauno, gražioje vietoje, šalia Nemuno (300 m), bei didelio vandens tvenkinio (200 m). Įsikūrusi moderni Petrauskų sodyba. Tai puiki vieta švęsti vestuves, gimtadienius, rengti klasiokų, grupiokų, susitikimus bei kitas šventes, ar tiesiog maloniai ir turiningai praleisti laiką
+                su draugais ar šeima. Svajonė tapo realybe, ir jau 15- metų Petrauskų sodyba stebina ne tik aplinkos ir interjero estetika, tačiau ir savo požiūriu į pobūvius. Prabanga alsuojanti pokylių salė – pieštomis garsios dailininkės sienomis. Švenčiantys šeštadieniais, antrąją dieną svečiai
+                sodyboje gali viešėti ilgiau nei įprasta. Kiekviena šventė, vykstanti Petrauskų sodyboje, yra vienintelė, todėl stengiamės pastebėti kiekvieną svarbią detalę.
+              </p>
+
+              <div class="sm:flex sm:gap-8">
+                <ul class="list">
+                  <li>Salė talpina iki 60 žmonių.</li>
+                  <li>48 miegamos vietos svečiams.</li>
+                  <li>Didelis kiemas.</li>
+                </ul>
+                <ul class="list">
+                  <li>Prabanga alsuojanti pokylių salė.</li>
+                  <li>Papildomos pramogos svečiams.</li>
+                  <li>Automobilių stovėjimo aikštelė.</li>
+                </ul>
+              </div>
+              <a class="btn btn-primary mt-8" href="">Užsisakyti</a>
+            </div>
+          </div>
+          <h2 class="title">sodybos nuotraukos</h2>
+          <div>image</div>
+        </section>
+
+        <section class="py-24 lg:pb-36 styled">
+          <h2 class="title">Pramogos sodyboje</h2>
+          <div class="lg:grid lg:grid-cols-2 lg:gap-12 xl:gap-20 mb-16">
+            <img src="./img/small-house.webp" alt="" />
+            <div class="mt-12 lg:mt-0 lg:self-center">
+              <h3 class="title">Atskiras namukas svečiams</h3>
+              <p>Manau visi esame labai pavargę šiuo laikotarpiu, tad siūlome jums pailsėti ir praleisti turiningai laiką.</p>
+              <ul class="list">
+                <li>Miegamos vietos 8 žmonėms (4 dvigulės lovos ).</li>
+                <li>Nedidelė virtuvėlė su visais indais maisto ruošimui.</li>
+                <li>Pirtis ir džiakuzi viduje.</li>
+              </ul>
+              <a class="btn btn-primary mt-8" href="">Užsisakyti</a>
+            </div>
+          </div>
+
+          <h2 class="title">Privalumai</h2>
+          <div>
+            <div>
+              <img src="" alt="" />
+              <span>džiakuzi</span>
+            </div>
+            <div>
+              <img src="" alt="" />
+              <span>pirtis</span>
+            </div>
+            <div>
+              <img src="" alt="" />
+              <span>didelė lauko pavesinė </span>
+            </div>
+            <div>
+              <div>Baseinas veikia tik vasara</div>
+              <img src="" alt="" />
+              <span>lauko baseinas </span>
+            </div>
+          </div>
+        </section>
+        <section class="py-24 lg:pb-36">
+          <h2 class="title">Nemokamos dekoracijos</h2>
+          <div class="sm:flex sm:gap-8 mb-16">
+            <ul class="list">
+              <li>Baltos (ne veliuro) arba burgundiškos (veliūro)  staltieses.</li>
+              <li>Baltos medziaginės servetėlės</li>
+              <li>Dvi didelės prabangiu dirbtinu geliu puokstes</li>
+              <li>Momentinis fotoparatas (jūsų juostelė).</li>
+              <li>zvakidės</li>
+            </ul>
+            <ul class="list">
+              <li>Molbertas su veidrodziu.</li>
+              <li>Stovelis palinkėjimų knygai</li>
+              <li>Kibiriukai sampanui - ar kitam alkoholiui sidabro spalvos [uzsakovu  ledukai] </li>
+              <li>Dideli indai  alkoholiniams ir gaiviems gerimams sidabro splvos [ uzsakovu ledukai]</li>
+              <li>Didelis indas- vonele gerimams sidabro spalvos[ uzsakovu ledukai]</li>
+            </ul>
+          </div>
+
+          <h2 class="title">Dekoracijų nuotraukos</h2>
+          <div></div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer pt-24 lg:pt-28">
+      <div class="container">
+        <div class="lg:flex lg:gap-12 items-center">
+          <iframe
+            class="google-map w-full lg:w-auto"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2291.80285050245!2d23.641650199999997!3d54.941477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e6de3c0ff6a661%3A0xb132ad1a1fa4d792!2sKranto%20g.%205%2C%2053484%20Kulautuva!5e0!3m2!1slt!2slt!4v1705069536299!5m2!1slt!2slt"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="mb-12 md:flex md:gap-16 md:mt-12">
+            <div class="my-12 md:my-0 shrink-0">
+              <h5 class="leading-none">Kontaktai</h5>
+              <ul class="reg-navi list-icons">
+                <li><img src="./img/icons/location.png" alt="" /><a href=""> Kranto g. 5, Kulautuva, Kauno r.</a></li>
+                <li><img src="./img/icons/phone.png" /><a href="tel:+370 689 27519">+370 689 27519</a></li>
+                <li><img src="./img/icons/email.png" /><a href="mailto:rrpetrauskai@yahoo.com">rrpetrauskai@yahoo.com</a></li>
+              </ul>
+            </div>
+            <div class="shrink-0">
+              <ul class="reg-navi">
+                <h5 class="leading-none">Navigacija</h5>
+                <li><a href="">Pagrindinis</a></li>
+                <li><a href="">Apie sodybą</a></li>
+                <li><a href="">Pramogos</a></li>
+              </ul>
+            </div>
+            <div class="go-up mt-12 md:mt-0 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="footer-line mt-24 lg:mt-28">
+          <p>© PetrauskuSodyba.lt - Sodyba jūsų šventėms.</p>
+          <div>Puslapių kūrimas: <a href="/">t-dev.lt</a></div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
