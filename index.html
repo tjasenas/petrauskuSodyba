@@ -4,51 +4,101 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <script defer type="module" src="/main.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <title>Vite App</title>
   </head>
   <body>
+
+    <div class="mob-wrapper">
+      <div class="mob-header">
+          <h5>Navigacija</h5>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 close-btn">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>  
+      </div>
+      <ul class="mob-navi">
+        <li><a class="scroll" href="#section-one">Apie sodybą</a></li>
+        <li><a class="scroll" href="#section-two">Pramogos</a></li>
+        <li><a class="scroll" href="#section-three">Dekoracijos</a></li>
+        <li><a class="scroll" href="#section-four">Kontaktai</a></li>
+      </ul>
+    </div>
+    <div class="overlay"></div>
+
     <div class="container">
-      <header class="mt-8 flex justify-between items-center">
+      <header id="section-zero" class="mt-8 flex justify-between items-center">
         <a href="/">
           <img class="w-24 sm:w-32 lg:w-44" src="./img/logo.png" alt="" />
         </a>
         <nav class="flex items-center gap-4">
           <ul class="hidden lg:flex navi">
-            <li><a href="">Pagrindinis</a></li>
-            <li><a href="">Apie sodybą</a></li>
-            <li><a href="">Pramogos</a></li>
-            <li><a href="">Dekoracijos</a></li>
-            <li><a href="">Kontaktai</a></li>
+            <li><a class="scroll" href="#section-one">Apie sodybą</a></li>
+            <li><a class="scroll" href="#section-two">Pramogos</a></li>
+            <li><a class="scroll" href="#section-three">Dekoracijos</a></li>
+            <li><a class="scroll" href="#section-four">Kontaktai</a></li>
           </ul>
-          <a class="btn btn-primary" href="">Užsisakyti</a>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="lg:hidden w-8 h-8">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+          <a class="btn btn-primary" href="tel:+370 689 27519">Užsisakyti</a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="lg:hidden w-8 h-8 open-btn"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+            />
           </svg>
         </nav>
       </header>
       <section class="pt-12 pb-24 lg:pb-36 styled lg:grid grid-cols-2 gap-20">
         <div class="mb-8 max-w-[450px] lg:max-w-[100%] self-center">
-          <h1 class="hero-title">Petrauskų <span class="add-color">sodyba</span>, tai išskirtinė vieta jūsų šventėms</h1>
-          <p class="mb-8 max-w-[420px]">Šiuolaikiška sodyba, apgaubta gamtos grožiu, idealiai pritaikyta jūsų šventėms ir renginiams.</p>
-          <a class="btn btn-outline" href="">Apie sodybą</a>
+          <h1 class="hero-title">
+            Petrauskų <span class="add-color">sodyba</span>, tai išskirtinė
+            vieta jūsų šventėms
+          </h1>
+          <p class="mb-8 max-w-[420px]">
+            Šiuolaikiška sodyba, apgaubta gamtos grožiu, idealiai pritaikyta
+            jūsų šventėms ir renginiams.
+          </p>
+          <a class="btn btn-outline scroll" href="#section-one">Apie sodybą</a>
         </div>
         <div class="hero-img">
-          <img class="w-full" src="./img/hero-img.webp" alt="" />
+          <a href="./img/hero-img.webp" data-fancybox>
+            <img class="w-full" src="./img/hero-img.webp" alt="" />
+          </a>
         </div>
       </section>
 
       <main>
-        <section class="py-24 lg:pb-36 styled">
+        <section id="section-one" class="py-24 lg:pb-36 styled">
           <div class="lg:grid lg:grid-cols-2 lg:gap-12 xl:gap-20 mb-16">
-            <img class="styled-img" src="./img/about-img.webp" alt="" />
+            <a href="./img/about-img.webp" data-fancybox="gallery-one">
+              <img class="styled-img" src="./img/about-img.webp" alt="" />
+            </a>
+            
+        
             <div class="mt-6 lg:mt-0 lg:self-center">
               <h2 class="title">Apie sodybą</h2>
               <p>
-                Netoli Kauno, gražioje vietoje, šalia Nemuno (300 m), bei didelio vandens tvenkinio (200 m). Įsikūrusi moderni Petrauskų sodyba. Tai puiki vieta švęsti vestuves, gimtadienius, rengti klasiokų, grupiokų, susitikimus bei kitas šventes, ar tiesiog maloniai ir turiningai praleisti laiką
-                su draugais ar šeima. Svajonė tapo realybe, ir jau 15- metų Petrauskų sodyba stebina ne tik aplinkos ir interjero estetika, tačiau ir savo požiūriu į pobūvius. Prabanga alsuojanti pokylių salė – pieštomis garsios dailininkės sienomis. Švenčiantys šeštadieniais, antrąją dieną svečiai
-                sodyboje gali viešėti ilgiau nei įprasta. Kiekviena šventė, vykstanti Petrauskų sodyboje, yra vienintelė, todėl stengiamės pastebėti kiekvieną svarbią detalę.
+                Netoli Kauno, gražioje vietoje, šalia Nemuno (300 m), bei
+                didelio vandens tvenkinio (200 m). Įsikūrusi moderni Petrauskų
+                sodyba. Tai puiki vieta švęsti vestuves, gimtadienius, rengti
+                klasiokų, grupiokų, susitikimus bei kitas šventes, ar tiesiog
+                maloniai ir turiningai praleisti laiką su draugais ar šeima.
+                Svajonė tapo realybe, ir jau 15- metų Petrauskų sodyba stebina
+                ne tik aplinkos ir interjero estetika, tačiau ir savo požiūriu į
+                pobūvius. Prabanga alsuojanti pokylių salė – pieštomis garsios
+                dailininkės sienomis. Švenčiantys šeštadieniais, antrąją dieną
+                svečiai sodyboje gali viešėti ilgiau nei įprasta. Kiekviena
+                šventė, vykstanti Petrauskų sodyboje, yra vienintelė, todėl
+                stengiamės pastebėti kiekvieną svarbią detalę.
               </p>
 
               <div class="sm:flex sm:gap-8">
@@ -63,76 +113,217 @@
                   <li>Automobilių stovėjimo aikštelė.</li>
                 </ul>
               </div>
-              <a class="btn btn-primary mt-8" href="">Užsisakyti</a>
+              <a class="btn btn-primary mt-8" href="tel:+370 689 27519">Užsisakyti</a>
             </div>
           </div>
-          <h2 class="title">sodybos nuotraukos</h2>
-          <div>image</div>
+          <h2 class="title">sodybos nuotraukos (43)</h2>
+          <div
+            class="list-wrapper grid grid-cols-2 md:grid-cols-4 gap-2 lg:gap-4"
+          >
+            <div>
+              <a href="./img/gallery-images/37.jpg" data-fancybox="gallery-one">
+                <img src="./img/small-images/37.jpg" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="./img/gallery-images/38.jpg" data-fancybox="gallery-one">
+                <img src="./img/small-images/38.jpg" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="./img/gallery-images/40.jpg" data-fancybox="gallery-one">
+                <img src="./img/small-images/40.jpg" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="./img/gallery-images/41.jpg" data-fancybox="gallery-one">
+                <img src="./img/small-images/41.jpg" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="./img/gallery-images/17.jpg" data-fancybox="gallery-one">
+                <img src="./img/small-images/17.jpg" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="./img/gallery-images/5.jpg" data-fancybox="gallery-one">
+                <img src="./img/small-images/5.jpg" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="./img/gallery-images/35.jpg" data-fancybox="gallery-one">
+                <img src="./img/small-images/35.jpg" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="./img/gallery-images/21.jpg" data-fancybox="gallery-one">
+                <img src="./img/small-images/21.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+          <a href="./img/gallery-images/1.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/2.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/3.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/4.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/5.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/6.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/7.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/8.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/9.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/10.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/11.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/12.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/13.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/14.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/16.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/17.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/18.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/19.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/20.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/21.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/22.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/23.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/24.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/25.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/26.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/27.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/28.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/29.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/30.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/31.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/32.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/33.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/34.jpg" data-fancybox="gallery-one"></a>
+          <a href="./img/gallery-images/35.jpg" data-fancybox="gallery-one"></a>
         </section>
-
-        <section class="py-24 lg:pb-36 styled">
+        <section id="section-two"  class="py-24 lg:pb-36 styled">
           <h2 class="title">Pramogos sodyboje</h2>
           <div class="lg:grid lg:grid-cols-2 lg:gap-12 xl:gap-20 mb-16">
-            <img src="./img/small-house.webp" alt="" />
+            <a href="./img/small-house.webp" data-fancybox="gallery-three">
+              <img src="./img/small-house.webp" alt="" />
+            </a>
             <div class="mt-12 lg:mt-0 lg:self-center">
               <h3 class="title">Atskiras namukas svečiams</h3>
-              <p>Manau visi esame labai pavargę šiuo laikotarpiu, tad siūlome jums pailsėti ir praleisti turiningai laiką.</p>
+              <p>
+                Manau visi esame labai pavargę šiuo laikotarpiu, tad siūlome
+                jums pailsėti ir praleisti turiningai laiką.
+              </p>
               <ul class="list">
                 <li>Miegamos vietos 8 žmonėms (4 dvigulės lovos ).</li>
                 <li>Nedidelė virtuvėlė su visais indais maisto ruošimui.</li>
                 <li>Pirtis ir džiakuzi viduje.</li>
               </ul>
-              <a class="btn btn-primary mt-8" href="">Užsisakyti</a>
+              <a class="btn btn-primary mt-8" href="tel:+370 689 27519">Užsisakyti</a>
             </div>
           </div>
 
           <h2 class="title">Privalumai</h2>
-          <div>
+          <div
+            class="list-wrapper grid grid-cols-2 md:grid-cols-4 gap-2 lg:gap-4"
+          >
             <div>
-              <img src="" alt="" />
-              <span>džiakuzi</span>
+              <a href="./img/gallery-images/26.jpg" data-fancybox="gallery-three">
+                <img src="./img/small-images/dziakuzi.webp" alt="" />
+              </a>
+              <h6>džiakuzi</h6>
             </div>
             <div>
-              <img src="" alt="" />
-              <span>pirtis</span>
+              <a href="./img/gallery-images/42.jpg" data-fancybox="gallery-three">
+                <img src="./img/small-images/pirtis.webp" alt="" />
+              </a>
+              <h6>pirtis</h6>
             </div>
             <div>
-              <img src="" alt="" />
-              <span>didelė lauko pavesinė </span>
+              <a href="./img/gallery-images/44.jpg" data-fancybox="gallery-three">
+                <img src="./img/small-images/pavesine.webp" alt="" />
+              </a>
+              <h6>Lauko pavesinė</h6>
             </div>
-            <div>
-              <div>Baseinas veikia tik vasara</div>
-              <img src="" alt="" />
-              <span>lauko baseinas </span>
+            <div class="spec-block">
+              <div class="text-over">Veikia tik vasara</div>
+              <a href="./img/gallery-images/43.jpg" data-fancybox="gallery-three">
+                <img src="./img/small-images/baseinas.webp" alt="" />
+              </a>
+              <h6>lauko baseinas</h6>
             </div>
           </div>
         </section>
-        <section class="py-24 lg:pb-36">
-          <h2 class="title">Nemokamos dekoracijos</h2>
+        <section  id="section-three"  class="py-24 lg:pb-36">
+          <h2 class="title">Dekoracijos</h2>
+
+          <h6>Nemokamos dekoracijos</h6>
           <div class="sm:flex sm:gap-8 mb-16">
             <ul class="list">
-              <li>Baltos (ne veliuro) arba burgundiškos (veliūro)  staltieses.</li>
-              <li>Baltos medziaginės servetėlės</li>
-              <li>Dvi didelės prabangiu dirbtinu geliu puokstes</li>
+              <li>
+                Baltos (ne veliuro) arba burgundiškos (veliūro)  staltieses.
+              </li>
+              <li>Baltos medžiaginės servetėlės</li>
+              <li>Dvi didelės prabangiu dirbtinių gelių puokštės</li>
               <li>Momentinis fotoparatas (jūsų juostelė).</li>
-              <li>zvakidės</li>
+              <li>Žvakidės</li>
             </ul>
             <ul class="list">
-              <li>Molbertas su veidrodziu.</li>
+              <li>Molbertas su veidrodžiu.</li>
               <li>Stovelis palinkėjimų knygai</li>
-              <li>Kibiriukai sampanui - ar kitam alkoholiui sidabro spalvos [uzsakovu  ledukai] </li>
-              <li>Dideli indai  alkoholiniams ir gaiviems gerimams sidabro splvos [ uzsakovu ledukai]</li>
-              <li>Didelis indas- vonele gerimams sidabro spalvos[ uzsakovu ledukai]</li>
+              <li>
+                Kibiriukai šampanui - ar kitam alkoholiui sidabro spalvos
+                (užsakovu ledukai)
+              </li>
+              <li>
+                Dideli indai alkoholiniams ir gaiviems gėrimams sidabro spalvos
+                (užsakovu ledukai)
+              </li>
+              <li>
+                Didelis indas - vonelė gerimams sidabro spalvos (užsakovu ledukai)
+              </li>
             </ul>
           </div>
-
+          <div class="mb-16">
+            <h6>Mokamos dekoracijos</h6>
+  
+            <ul class="list">
+              <li>
+                Apvalius stalai už papildomą 60eur. mokesti.
+              </li>
+            </ul>
+          </div>
           <h2 class="title">Dekoracijų nuotraukos</h2>
-          <div></div>
+          <div
+            class="list-wrapper grid grid-cols-2 md:grid-cols-4 gap-2 lg:gap-4"
+          >
+            <div>
+              <a href="./img/gallery-images/vonele-gerimams.jpg" data-fancybox='gallery-two'>
+                <img src="./img/small-images/vonele-gerimams.webp" alt="" />
+              </a>
+              <h6>Kibiriukai alkoholiui</h6>
+            </div>
+            <div>
+              <a href="./img/gallery-images/fotoparatas.jpg" data-fancybox='gallery-two'></a>
+              <img src="./img/small-images/fotoparatas.webp" alt="" />
+            </a>
+              <h6>Momentinis fotoparatas</h6>
+            </div>
+            <div>
+              <a href="./img/gallery-images/remelis.jpg" data-fancybox='gallery-two'></a>
+              <img src="./img/small-images/remelis.webp" alt="" />
+            </a>
+              <h6>Stovelis palinkėjimų knygai</h6>
+            </div>
+            <div>
+              <a href="./img/gallery-images/molbertas-su-veidrodziu.jpg" data-fancybox='gallery-two'></a>
+              <img
+                src="./img/small-images/molbertas-su-veidrodziu.webp"
+                alt=""
+              />
+            </a>
+              <h6>Molbertas su veidrodžiu</h6>
+            </div>
+          </div>
         </section>
       </main>
     </div>
 
-    <footer class="footer pt-24 lg:pt-28">
+    <footer  id="section-four"  class="footer pt-24 lg:pt-28">
       <div class="container">
         <div class="lg:flex lg:gap-12 items-center">
           <iframe
@@ -147,24 +338,50 @@
             <div class="my-12 md:my-0 shrink-0">
               <h5 class="leading-none">Kontaktai</h5>
               <ul class="reg-navi list-icons">
-                <li><img src="./img/icons/location.png" alt="" /><a href=""> Kranto g. 5, Kulautuva, Kauno r.</a></li>
-                <li><img src="./img/icons/phone.png" /><a href="tel:+370 689 27519">+370 689 27519</a></li>
-                <li><img src="./img/icons/email.png" /><a href="mailto:rrpetrauskai@yahoo.com">rrpetrauskai@yahoo.com</a></li>
+                <li>
+                  <img src="./img/icons/location.png" alt="" /><a target="_blank" href="https://www.google.com/maps/place/Kulautuvos+p%C4%97s%C4%8Di%C5%B3j%C5%B3+sveikatingumo+takas/@54.941477,23.64165,15z/data=!4m6!3m5!1s0x46e6df2f8c8fb665:0x9d1dd7c2464124f6!8m2!3d54.9431019!4d23.6457851!16s%2Fg%2F11h4dc5h5f?hl=lt&entry=ttu">
+                    Kranto g. 5, Kulautuva, Kauno r.</a
+                  >
+                </li>
+                <li>
+                  <img src="./img/icons/phone.png" /><a
+                    href="tel:+370 689 27519"
+                    >+370 689 27519</a
+                  >
+                </li>
+                <li>
+                  <img src="./img/icons/email.png" /><a
+                    href="mailto:rrpetrauskai@yahoo.com"
+                    >rrpetrauskai@yahoo.com</a
+                  >
+                </li>
               </ul>
             </div>
             <div class="shrink-0">
               <ul class="reg-navi">
                 <h5 class="leading-none">Navigacija</h5>
-                <li><a href="">Pagrindinis</a></li>
-                <li><a href="">Apie sodybą</a></li>
-                <li><a href="">Pramogos</a></li>
+                <li><a class="scroll" href="#section-one">Apie sodybą</a></li>
+                <li><a class="scroll" href="#section-two">Pramogos</a></li>
+                <li><a class="scroll" href="#section-two">Dekoracijos</a></li>
               </ul>
             </div>
-            <div class="go-up mt-12 md:mt-0 shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+            
+            <a class="go-up mt-12 md:mt-0 shrink-0 scroll"  href="#section-zero">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                />
               </svg>
-            </div>
+            </a>
           </div>
         </div>
         <div class="footer-line mt-24 lg:mt-28">
